@@ -1,3 +1,5 @@
+import java.lang.IllegalArgumentException
+
 fun main() {
     val player = Player("Madrigal")
     player.castFireball()
@@ -8,6 +10,13 @@ fun main() {
 
     val auraColor = player.auraColor()
     player.auraColor()
+    var townSquare = TownSquare()
+    var className = when(townSquare){
+        is TownSquare -> "TownSquare"
+        is room -> "Room"
+        else -> throw IllegalArgumentException()
+    }
+    print(className)
 
     printPlayerStatus(player)
 }
