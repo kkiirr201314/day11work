@@ -3,3 +3,4 @@ open class room(val name: String){
 
     fun load () = "這裡沒什麼可看的..."
 }
+class TownSquare : room("Town Square")
