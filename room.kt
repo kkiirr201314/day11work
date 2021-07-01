@@ -5,11 +5,11 @@ open class room(val name: String){
 
     open fun load () = "這裡沒什麼可看的..."
 }
-class TownSquare : room("Town Square"){
+open class TownSquare : room("Town Square"){
     override val dangerLevel = super.dangerLevel -3
     private var bellSound = "噹！噹！噹！噹！"
 
-    override fun  load() = "因為你的到來村民正在集會與歡呼!\n${ringBell()}"
+    final override fun  load() = "因為你的到來村民正在集會與歡呼!\n${ringBell()}"
 
     private fun ringBell() = "鐘樓正在宣布你的到來。　$bellSound"
 }
