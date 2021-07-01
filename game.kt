@@ -12,8 +12,9 @@ fun main() {
     player.auraColor()
     var townSquare = TownSquare()
     var className = when(townSquare){
-        is TownSquare -> "TownSquare"
+
         is room -> "Room"
+        is TownSquare -> "TownSquare"
         else -> throw IllegalArgumentException()
     }
     print(className)
